@@ -25,10 +25,14 @@ process.source = cms.Source("PoolSource",
     duplicateCheckMode = cms.untracked.string("noDuplicateCheck"),
     fileNames = cms.untracked.vstring(
   #   '/store/group/phys_heavyions/mnguyen/HIRun2022A/RecoPatfromRaw_RAW2DIGI_L1Reco_RECO_PAT_inMINIAOD.root',
- 'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/219/00000/d0a95156-a786-4e2c-8549-2a39e5f293c0.root',
- 'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/229/00000/c5e5fbc5-b1c4-4920-9422-5116256f7fdf.root',
- 'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/243/00000/27d8b18f-2261-4c21-8a16-2dd50fcc4373.root'
-   ), 
+ #'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/219/00000/d0a95156-a786-4e2c-8549-2a39e5f293c0.root',
+ #'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/229/00000/c5e5fbc5-b1c4-4920-9422-5116256f7fdf.root',
+# 'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/243/00000/27d8b18f-2261-4c21-8a16-2dd50fcc4373.root'
+'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/318/00000/06d04439-5784-498c-a4af-3fffc3545a96.root',
+'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/318/00000/1077f7d6-e4cc-49cd-8d15-f4d145e9f869.root',
+'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/318/00000/22e8fcab-0b8f-4504-8b38-3c99e95bf833.root',
+'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/318/00000/3fb50183-105d-46d8-9c44-95fd1b2ae44a.root',
+    ), 
 )
 
 # number of events to process, set to -1 to process all events
@@ -47,7 +51,7 @@ process.load('FWCore.MessageService.MessageLogger_cfi')
 
 
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '125X_dataRun3_relval_v4', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, '125X_dataRun3_relval_v6', '')
 process.HiForestInfo.GlobalTagLabel = process.GlobalTag.globaltag
 
 #centralityTag = "CentralityTable_HFtowers200_DataPbPb_periHYDJETshape_run2v1031x02_offline"
@@ -155,11 +159,13 @@ from HLTrigger.HLTfilters.hltHighLevel_cfi import hltHighLevel
 process.hltfilter = hltHighLevel.clone(
     HLTPaths = [
       # "HLT_HIZeroBias_v4",                                                     
-   "HLT_HIMinimumBias_v2",
+  # "HLT_HIMinimumBias_v2",
 #"HLT_HIUPC_ZeroBias_MinPixelCluster400_MaxPixelCluster10000_v2"
 #"HLT_HIUPC_SingleMuOpen_NotMBHF2OR_MaxPixelTrack_v4"
 #'HLT_HIUPC_DoubleEG2_BptxAND_SinglePixelTrack_MaxPixelTrack_v4"
 #"HLT_HIUPC_ZeroBias_SinglePixelTrackLowPt_MaxPixelCluster400_v2"
+#"HLT_HIUPC_ZeroBias_SinglePixelTrackLowPt_MaxPixelCluster400_v2"
+"HLT_HIUPC_SingleMuOpen_OR_SingleMuCosmic_EMTF_NotMBHF2AND_v2"
    ]
 )
 process.filterSequence = cms.Sequence(
