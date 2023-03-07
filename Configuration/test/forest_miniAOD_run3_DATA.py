@@ -28,6 +28,8 @@ process.source = cms.Source("PoolSource",
  #'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/219/00000/d0a95156-a786-4e2c-8549-2a39e5f293c0.root',
  #'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/229/00000/c5e5fbc5-b1c4-4920-9422-5116256f7fdf.root',
 # 'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/243/00000/27d8b18f-2261-4c21-8a16-2dd50fcc4373.root'
+
+## file dataset=/HITestRaw0/HIRun2022A-PromptReco-v1/AOD  run in [362318]        
 'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/318/00000/06d04439-5784-498c-a4af-3fffc3545a96.root',
 'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/318/00000/1077f7d6-e4cc-49cd-8d15-f4d145e9f869.root',
 'root://cms-xrd-global.cern.ch//store/hidata/HIRun2022A/HITestRaw0/AOD/PromptReco-v1/000/362/318/00000/22e8fcab-0b8f-4504-8b38-3c99e95bf833.root',
